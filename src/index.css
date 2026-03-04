@@ -1,0 +1,64 @@
+:root {
+  /* TEG Brand Colors - pronounced purple and sunflower */
+  --teg-soft-purple: #7B5B9E;
+  --teg-purple-deep: #4A3A6B;
+  --teg-dusty-pink: #D4A5A5;
+  --teg-pink-soft: #E8C4C4;
+  --teg-cream: #FDF8F3;
+  --teg-cream-dark: #F5EDE6;
+  --teg-white: #FFFFFF;
+  --teg-gold: #E6B800;
+  --teg-gold-light: #F5D54E;
+  --teg-text: #4A4458;
+  --teg-text-light: #6B6575;
+  
+  font-family: 'Source Sans 3', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--teg-text);
+  background-color: var(--teg-cream);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--teg-purple-deep);
+}
+
+a {
+  color: var(--teg-soft-purple);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--teg-gold);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}

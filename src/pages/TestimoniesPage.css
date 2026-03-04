@@ -1,0 +1,82 @@
+.teg-testimonies-content {
+  padding-top: 1rem;
+}
+
+.teg-testimonies-scroll {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  min-height: 320px;
+}
+
+.teg-testimony-card {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+}
+
+.teg-testimonies-scroll:has(.teg-testimony-card:only-child) .teg-testimony-card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.teg-testimonies-scroll:not(:has(.teg-testimony-card:only-child)) .teg-testimony-card {
+  position: absolute;
+  inset: 0;
+}
+
+.teg-testimony-card.active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.teg-testimony-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--teg-purple-deep);
+}
+
+.teg-testimony-card blockquote {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--teg-text-light);
+  font-style: italic;
+  padding: 1.5rem;
+  background: var(--teg-cream);
+  border-radius: 12px;
+  border-left: 4px solid var(--teg-gold);
+  margin: 0;
+}
+
+.teg-testimonies-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.teg-testimonies-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--teg-soft-purple);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.teg-testimonies-dots button:hover {
+  background: var(--teg-soft-purple);
+  opacity: 0.7;
+}
+
+.teg-testimonies-dots button.active {
+  background: var(--teg-gold);
+  border-color: var(--teg-gold);
+  transform: scale(1.2);
+}

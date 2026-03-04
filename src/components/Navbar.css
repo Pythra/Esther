@@ -1,0 +1,131 @@
+.teg-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgb(255, 241, 224);
+  backdrop-filter: blur(10px);
+  border-bottom: none;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.teg-navbar--transparent {
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.teg-navbar--transparent .teg-logo-text,
+.teg-navbar--transparent .teg-navbar-menu a {
+  color: var(--teg-white) !important;
+}
+
+.teg-navbar--transparent .teg-navbar-toggle span {
+  background: var(--teg-white);
+}
+
+.teg-navbar--transparent .teg-navbar-menu.active a {
+  color: var(--teg-purple-deep) !important;
+}
+
+.teg-navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.6rem 2rem 0.6rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.teg-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.teg-logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.teg-logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--teg-purple-deep);
+}
+
+.teg-navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.teg-navbar-menu a {
+  font-weight: 500;
+  color: var(--teg-purple-deep);
+  font-size: 0.95rem;
+}
+
+.teg-navbar-menu a:hover {
+  color: var(--teg-gold);
+}
+
+.teg-navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.teg-navbar-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--teg-purple-deep);
+  transition: all 0.3s ease;
+}
+
+.teg-navbar-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.teg-navbar-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.teg-navbar-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 1024px) {
+  .teg-navbar-menu {
+    position: fixed;
+    top: 58px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--teg-cream);
+    padding: 2rem;
+    gap: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .teg-navbar-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .teg-navbar-toggle {
+    display: flex;
+  }
+}
+

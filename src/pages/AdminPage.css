@@ -1,0 +1,438 @@
+/* TEG Admin – same palette as main site */
+.teg-admin {
+  min-height: 100vh;
+  background: var(--teg-cream);
+  padding-top: 0;
+}
+
+.teg-admin-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--teg-purple-deep) 0%, var(--teg-soft-purple) 100%);
+}
+
+.teg-admin-login-card {
+  background: var(--teg-white);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  max-width: 380px;
+  width: 100%;
+}
+
+.teg-admin-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.teg-admin-login-card h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
+  color: var(--teg-purple-deep);
+  margin-bottom: 0.5rem;
+}
+
+.teg-admin-login-card > p {
+  color: var(--teg-text-light);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.teg-admin-login-card input[type="password"] {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 2px solid var(--teg-cream-dark);
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s;
+}
+
+.teg-admin-login-card input[type="password"]:focus {
+  outline: none;
+  border-color: var(--teg-soft-purple);
+}
+
+.teg-admin-login-card .teg-btn {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.teg-admin-back {
+  display: block;
+  text-align: center;
+  color: var(--teg-soft-purple);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.teg-admin-back:hover {
+  color: var(--teg-gold);
+}
+
+.teg-admin-error {
+  color: #c0392b;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Header */
+.teg-admin-header {
+  background: linear-gradient(135deg, var(--teg-purple-deep), var(--teg-soft-purple));
+  color: var(--teg-white);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.teg-admin-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.teg-admin-header-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.teg-admin-header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--teg-white);
+  margin: 0;
+}
+
+.teg-admin-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.teg-admin-link {
+  color: var(--teg-gold-light);
+  font-size: 0.95rem;
+}
+
+.teg-admin-link:hover {
+  color: var(--teg-white);
+}
+
+.teg-admin-logout {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: var(--teg-white);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.teg-admin-logout:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--teg-white);
+}
+
+/* Body */
+.teg-admin-body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Summary cards */
+.teg-admin-summary {
+  margin-bottom: 2rem;
+}
+
+.teg-admin-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.teg-admin-card {
+  background: var(--teg-white);
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(74, 58, 107, 0.08);
+  border: 1px solid var(--teg-cream-dark);
+}
+
+.teg-admin-card-value {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--teg-purple-deep);
+  line-height: 1.2;
+}
+
+.teg-admin-card-label {
+  font-size: 0.85rem;
+  color: var(--teg-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Tabs */
+.teg-admin-content {
+  background: var(--teg-white);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(74, 58, 107, 0.08);
+  border: 1px solid var(--teg-cream-dark);
+  overflow: hidden;
+}
+
+.teg-admin-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-bottom: 2px solid var(--teg-cream-dark);
+  padding: 0 1rem;
+  background: var(--teg-cream);
+}
+
+.teg-admin-tab {
+  padding: 1rem 1.25rem;
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--teg-text-light);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.teg-admin-tab:hover {
+  color: var(--teg-purple-deep);
+}
+
+.teg-admin-tab.active {
+  color: var(--teg-purple-deep);
+  border-bottom-color: var(--teg-gold);
+}
+
+/* List */
+.teg-admin-list-wrap {
+  padding: 1.5rem 2rem 2rem;
+  min-height: 200px;
+}
+
+.teg-admin-loading,
+.teg-admin-empty {
+  color: var(--teg-text-light);
+  text-align: center;
+  padding: 2rem;
+}
+
+.teg-admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.teg-admin-item {
+  background: var(--teg-cream);
+  border-radius: 12px;
+  padding: 1.25rem;
+  border-left: 4px solid var(--teg-soft-purple);
+}
+
+.teg-admin-item--emergency {
+  border-left-color: var(--teg-gold);
+}
+
+.teg-admin-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.teg-admin-item-row strong {
+  color: var(--teg-purple-deep);
+  font-size: 1.05rem;
+}
+
+.teg-admin-item-row span {
+  font-size: 0.85rem;
+  color: var(--teg-text-light);
+}
+
+.teg-admin-item-meta {
+  font-size: 0.9rem;
+  color: var(--teg-text-light);
+  margin-bottom: 0.5rem;
+}
+
+.teg-admin-item-message {
+  color: var(--teg-text);
+  line-height: 1.6;
+  margin: 0.5rem 0 0;
+  white-space: pre-wrap;
+}
+
+.teg-admin-item-note {
+  font-size: 0.9rem;
+  color: var(--teg-text-light);
+  margin: 0.5rem 0 0;
+}
+
+.teg-admin-item-badge {
+  display: inline-block;
+  background: var(--teg-soft-purple);
+  color: var(--teg-white);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  margin-top: 0.35rem;
+}
+
+/* Events admin */
+.teg-admin-events-actions {
+  margin-bottom: 1.5rem;
+}
+
+.teg-admin-event-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.teg-admin-event-form select,
+.teg-admin-event-form input[type="text"],
+.teg-admin-event-form input[type="number"] {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--teg-cream-dark);
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.teg-admin-event-form select { min-width: 120px; }
+.teg-admin-event-form input[type="text"] { flex: 1; min-width: 160px; }
+.teg-admin-event-form input[type="number"] { width: 70px; }
+
+.teg-admin-events-hint {
+  font-size: 0.85rem;
+  color: var(--teg-text-light);
+  margin-top: 0.5rem;
+}
+
+.teg-admin-events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.teg-admin-event-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--teg-cream);
+  border-radius: 8px;
+  border-left: 4px solid var(--teg-gold);
+}
+
+.teg-admin-event-move {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.teg-admin-event-move button {
+  background: var(--teg-white);
+  border: 1px solid var(--teg-cream-dark);
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--teg-purple-deep);
+}
+
+.teg-admin-event-move button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.teg-admin-event-month {
+  font-weight: 700;
+  color: var(--teg-purple-deep);
+  min-width: 100px;
+}
+
+.teg-admin-event-title {
+  flex: 1;
+  color: var(--teg-text);
+}
+
+.teg-admin-event-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.teg-admin-event-actions button {
+  background: none;
+  border: none;
+  color: var(--teg-soft-purple);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.teg-admin-event-actions button:hover {
+  color: var(--teg-purple-deep);
+}
+
+.teg-admin-event-delete {
+  color: #c0392b !important;
+}
+
+.teg-admin-event-form--inline {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .teg-admin-body {
+    padding: 1rem;
+  }
+
+  .teg-admin-tabs {
+    padding: 0 0.5rem;
+  }
+
+  .teg-admin-tab {
+    padding: 0.75rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .teg-admin-list-wrap {
+    padding: 1rem;
+  }
+
+  .teg-admin-event-row {
+    flex-wrap: wrap;
+  }
+
+  .teg-admin-event-title {
+    width: 100%;
+    margin-left: 0;
+  }
+}

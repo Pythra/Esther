@@ -1,0 +1,182 @@
+/* Events – pinned note style, purple & yellow (TEG) */
+.teg-events-page {
+  padding-top: 58px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--teg-purple-deep) 0%, #5a4a75 50%, var(--teg-purple-deep) 100%);
+}
+
+.teg-events-hero {
+  text-align: center;
+  padding: 2.5rem 2rem 1.5rem;
+}
+
+.teg-events-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+  filter: brightness(1.1);
+}
+
+.teg-events-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--teg-white);
+  letter-spacing: 0.08em;
+  margin: 0 0 0.25rem;
+}
+
+.teg-events-year {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Pinned card */
+.teg-events-pinned {
+  position: relative;
+  max-width: 560px;
+  margin: 0 auto 2rem;
+  padding: 0 1.5rem;
+}
+
+.teg-events-pin {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 24px;
+  height: 32px;
+  background: linear-gradient(180deg, var(--teg-gold-light) 0%, var(--teg-gold) 50%, #8a7418 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.teg-events-pin::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 14px;
+  background: #2a2a2a;
+  border-radius: 0 0 3px 3px;
+}
+
+.teg-events-card {
+  position: relative;
+  background: linear-gradient(180deg, #e8e0f0 0%, #d8cce8 100%);
+  border-radius: 4px;
+  padding: 2rem 1.75rem 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Event list: month | line | title */
+.teg-events-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.teg-events-item {
+  display: grid;
+  grid-template-columns: 110px 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(74, 58, 107, 0.2);
+}
+
+.teg-events-item:last-of-type {
+  border-bottom: none;
+}
+
+.teg-events-month {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--teg-purple-deep);
+  letter-spacing: 0.04em;
+}
+
+.teg-events-line {
+  border-bottom: 1px solid rgba(74, 58, 107, 0.35);
+  min-width: 0;
+  align-self: center;
+}
+
+.teg-events-title {
+  text-align: right;
+  font-size: 0.95rem;
+  color: var(--teg-text);
+  line-height: 1.35;
+  max-width: 260px;
+}
+
+.teg-events-note {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--teg-text-light);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.teg-events-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 1.25rem 0 0;
+  padding: 0 1rem;
+}
+
+.teg-events-footer strong {
+  color: var(--teg-gold-light);
+}
+
+.teg-events-loading,
+.teg-events-error,
+.teg-events-empty {
+  text-align: center;
+  padding: 2rem;
+  color: var(--teg-text-light);
+}
+
+.teg-events-error {
+  color: #c0392b;
+}
+
+.teg-events-cta {
+  text-align: center;
+  padding: 0 2rem 3rem;
+}
+
+.teg-events-cta .teg-btn {
+  background: var(--teg-gold);
+  color: var(--teg-purple-deep);
+}
+
+.teg-events-cta .teg-btn:hover {
+  background: var(--teg-gold-light);
+}
+
+@media (max-width: 600px) {
+  .teg-events-item {
+    grid-template-columns: 1fr;
+    grid-template-areas: "month" "title";
+    gap: 0.25rem;
+  }
+
+  .teg-events-line {
+    display: none;
+  }
+
+  .teg-events-title {
+    justify-self: start;
+    text-align: left;
+    padding-left: 0;
+    max-width: none;
+  }
+}
