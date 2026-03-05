@@ -45,7 +45,7 @@
 .teg-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(20, 15, 35, 0.72) 100%);
+  background: linear-gradient(135deg, rgba(74, 58, 107, 0.78) 0%, rgba(74, 58, 107, 0.7) 50%, rgba(32, 24, 48, 0.85) 100%);
 }
 
 .teg-hero-content {
@@ -78,13 +78,16 @@
   max-width: 520px;
   line-height: 1.5;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  text-align: center;
 }
 
 .teg-hero-verse-ref {
   font-size: 0.95rem;
   color: var(--teg-gold-light);
   margin-bottom: 2rem;
+  margin-left: auto;
   letter-spacing: 0.02em;
+  text-align: right;
 }
 
 .teg-hero-tagline {
@@ -100,6 +103,13 @@
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+}
+
+.teg-hero-ctas .teg-btn {
+  border-radius: 9999px;
+  min-width: 10rem;
+  padding: 1rem 2.5rem;
+  border: none;
 }
 
 .teg-btn {
@@ -418,7 +428,7 @@
 }
 
 .teg-service-card {
-  background: rgb(255, 236, 213);
+  background: linear-gradient(135deg, var(--teg-soft-purple), var(--teg-purple-deep));
   padding: 2.5rem;
   border-radius: 24px;
   text-align: center;
@@ -426,7 +436,7 @@
 }
 
 .teg-service-card:hover {
-  box-shadow: 0 10px 40px rgba(139, 123, 168, 0.15);
+  box-shadow: 0 10px 40px rgba(139, 123, 168, 0.35);
   transform: translateY(-4px);
 }
 
@@ -434,22 +444,23 @@
   width: 64px;
   height: 64px;
   margin: 0 auto 1.5rem;
-  background: linear-gradient(135deg, var(--teg-soft-purple), var(--teg-dusty-pink));
+  background: rgb(255, 236, 213);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.75rem;
-  color: var(--teg-white);
+  color: var(--teg-soft-purple);
 }
 
 .teg-service-card h3 {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
+  color: var(--teg-white);
 }
 
 .teg-service-card p {
-  color: var(--teg-text-light);
+  color: var(--teg-cream);
   margin-bottom: 1rem;
   line-height: 1.6;
 }
@@ -457,6 +468,15 @@
 .teg-service-card .teg-card-link {
   display: inline-block;
   margin-top: 0.25rem;
+}
+
+.teg-service-card .teg-card-link {
+  font-weight: 600;
+  color: var(--teg-gold-light);
+}
+
+.teg-service-card .teg-card-link:hover {
+  color: var(--teg-gold);
 }
 
 .teg-card-link {
@@ -861,17 +881,23 @@
 
   .teg-hero {
     min-height: 90vh;
-    padding: 0 1.5rem 3rem;
+    padding: 6.5rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .teg-hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1;
+    min-height: 0;
+    width: 100%;
   }
 
   .teg-hero-verse {
-    margin-top: 2rem;
+    margin-top: 9rem;
   }
 
   .teg-hero-verse-ref {
@@ -882,16 +908,19 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: auto;
+    padding-top: 1.5rem;
+    padding-bottom: 10rem;
   }
 
   .teg-hero-ctas .teg-btn {
     width: auto;
     max-width: none;
+    min-width: 10rem;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: none;
     color: white;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;

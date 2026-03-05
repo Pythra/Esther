@@ -286,7 +286,6 @@ function HomePage() {
                   </li>
                 ))}
               </ul>
-              <Link to="/events" className="teg-btn teg-btn-primary teg-events-cta">View full schedule</Link>
             </div>
           )}
           {!eventsLoading && !eventsError && events.length === 0 && (
