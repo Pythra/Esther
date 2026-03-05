@@ -54,6 +54,15 @@ const TESTIMONIES = [
   {
     text: "My time at TEG House was truly a blessing during one of the most difficult seasons of my life. When I left my husband's house, I was emotionally overwhelmed and unsure of what the future held. TEG House didn't just provide me with shelter — it gave me safety, peace, and spiritual support. The environment was warm, prayerful, and encouraging. I was surrounded by people who showed genuine love, understanding, and godly counsel. Through the prayers, fellowship, and guidance I received, I began to heal emotionally and grow stronger in my faith. TEG House became more than a place to stay; it became a place of restoration for me. I am deeply grateful for the care, kindness, and spiritual covering I experienced there. It was a season that helped me rebuild my confidence and reconnect with God in a deeper way. I will always appreciate the impact TEG House had on my life during that period.",
   },
+  {
+    text: "As a widow with young children, I felt alone and forgotten. TEG did not forget me. The welfare team reached out with food, school support for my children, and regular visits that reminded me I was not alone. The prayer ministry became my anchor; joining the prayer watches gave me strength and hope when I had none. Today I am standing because TEG stood with me. I thank God for this ministry and the women who serve with such love.",
+  },
+  {
+    text: "I came to TEG broken and ashamed after leaving an abusive marriage. I was afraid of being judged. Instead, I was welcomed with open arms. The counselling, the safe space to cry and pray, and the sisterhood I found here changed my life. I learned that I am not defined by my past and that God still has a plan for me. TEG House was the bridge between my old life and the new beginning I have today. I will never forget what they did for me.",
+  },
+  {
+    text: "The charity shop and outreaches showed me that TEG cares about the whole person — not just spiritual needs but practical ones too. When I received clothes and household items from the charity shop, it restored my dignity. When I joined the Bible study and discipleship training, it restored my purpose. I am now volunteering with TEG because I want to give back what was given to me. This ministry is real, and the love here is genuine.",
+  },
 ];
 
 function HomePage() {
@@ -138,6 +147,18 @@ function HomePage() {
               ))}
             </div>
           </div>
+          <div className="teg-carousel-dots">
+            {CAROUSEL_IMAGES.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                className={i === carouselIndex ? 'active' : ''}
+                onClick={() => setCarouselIndex(i)}
+                aria-label={'View slide ' + (i + 1)}
+              />
+            ))}
+          </div>
+          <Link to="/about" className="teg-btn teg-btn-about">Learn more</Link>
         </div>
       </section>
 
@@ -160,7 +181,6 @@ function HomePage() {
               );
             })}
           </div>
-          <Link to="/about" className="teg-btn teg-btn-primary teg-about-cta">Learn more</Link>
         </div>
       </section>
 
@@ -257,7 +277,6 @@ function HomePage() {
               ))}
             </div>
           )}
-          <Link to="/testimonies" className="teg-btn teg-btn-outline teg-testimonies-cta">More Testimonies</Link>
         </div>
       </section>
 

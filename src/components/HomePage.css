@@ -52,6 +52,7 @@
   position: relative;
   z-index: 2;
   max-width: 800px;
+  margin-top: 2.5rem;
 }
 
 .teg-hero-title {
@@ -74,7 +75,7 @@
   font-size: clamp(1.1rem, 2.5vw, 1.35rem);
   font-style: italic;
   color: var(--teg-cream);
-  margin: 1.25rem auto 0.35rem;
+  margin: 1.85rem auto 0.35rem;
   max-width: 520px;
   line-height: 1.5;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
@@ -170,7 +171,7 @@
 .teg-about-carousel-section {
   margin-top: 0;
   padding: 4rem 2rem 5rem;
-  background: var(--teg-cream-dark);
+  background: var(--teg-white);
 }
 
 .teg-about-carousel-title {
@@ -180,16 +181,61 @@
 .teg-about-carousel-section .teg-about-carousel-intro {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.35rem;
-  line-height: 1.85;
+  line-height: 1.6;
   color: var(--teg-text);
   max-width: 720px;
   margin: 0 auto 2.5rem;
-  padding: 0 1.5rem;
+  padding: 0 0.75rem;
   letter-spacing: 0.01em;
 }
 
 .teg-about-carousel-section .teg-carousel {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.teg-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.teg-carousel-dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--teg-purple-deep);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.teg-carousel-dots button:hover {
+  background: var(--teg-soft-purple);
+}
+
+.teg-carousel-dots button.active {
+  background: var(--teg-purple-deep);
+  border-color: var(--teg-purple-deep);
+  transform: scale(1.15);
+}
+
+.teg-btn-about {
+  display: block;
+  width: fit-content;
+  margin: 1.5rem auto 0;
+  background: var(--teg-purple-deep);
+  color: var(--teg-white);
+  border: 2px solid var(--teg-purple-deep);
+}
+
+.teg-btn-about:hover {
+  background: var(--teg-soft-purple);
+  border-color: var(--teg-soft-purple);
+  color: var(--teg-white);
+  transform: translateY(-2px);
 }
 
 /* Services Section (Our Mission) */
@@ -343,7 +389,20 @@
 /* Charity section - matches Prayer Ministry layout */
 .teg-charity-section {
   padding: 5rem 2rem;
-  background: var(--teg-cream-dark);
+  background: rgb(255, 241, 224);
+}
+
+.teg-charity-section .teg-btn {
+  background: var(--teg-purple-deep);
+  color: var(--teg-white);
+  border: 2px solid var(--teg-purple-deep);
+}
+
+.teg-charity-section .teg-btn:hover {
+  background: var(--teg-soft-purple);
+  border-color: var(--teg-soft-purple);
+  color: var(--teg-white);
+  transform: translateY(-2px);
 }
 
 
@@ -495,7 +554,20 @@
 }
 
 .teg-about-preview {
-  background: var(--teg-cream-dark);
+  background: rgb(255, 241, 224);
+}
+
+.teg-about-preview .teg-btn {
+  background: var(--teg-purple-deep);
+  color: var(--teg-white);
+  border: 2px solid var(--teg-purple-deep);
+}
+
+.teg-about-preview .teg-btn:hover {
+  background: var(--teg-soft-purple);
+  border-color: var(--teg-soft-purple);
+  color: var(--teg-white);
+  transform: translateY(-2px);
 }
 
 .teg-welfare-preview {
@@ -880,8 +952,8 @@
   }
 
   .teg-hero {
-    min-height: 90vh;
-    padding: 6.5rem 1.5rem 2rem;
+    min-height: 83vh;
+    padding: 5rem 1.5rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -897,7 +969,7 @@
   }
 
   .teg-hero-verse {
-    margin-top: 9rem;
+    margin-top: 8rem;
   }
 
   .teg-hero-verse-ref {
@@ -909,8 +981,8 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: auto;
-    padding-top: 1.5rem;
-    padding-bottom: 10rem;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
   }
 
   .teg-hero-ctas .teg-btn {

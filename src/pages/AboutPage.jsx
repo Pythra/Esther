@@ -12,7 +12,7 @@ const LEADERSHIP = [
 
 function AboutPage() {
   return (
-    <div className="teg-page">
+    <div className="teg-page teg-page-about">
       <section className="teg-page-hero">
         <h1>About TEG</h1>
         <p>The 7000 Esther Generation (TEG) Women's Ministry</p>

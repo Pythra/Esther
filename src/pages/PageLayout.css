@@ -3,6 +3,23 @@
   min-height: 100vh;
 }
 
+.teg-page-about {
+  background: linear-gradient(180deg, var(--teg-purple-deep) 0%, var(--teg-soft-purple) 50%, #5a4a6e 100%);
+}
+
+.teg-page-about .teg-content-block h2 {
+  color: var(--teg-white);
+}
+
+.teg-page-about .teg-content-block p,
+.teg-page-about .teg-content-block li {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.teg-page-about .teg-address svg {
+  color: var(--teg-gold);
+}
+
 .teg-page-hero {
   background: linear-gradient(135deg, var(--teg-purple-deep), var(--teg-soft-purple));
   color: var(--teg-white);
